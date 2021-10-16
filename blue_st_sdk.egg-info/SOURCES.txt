@@ -21,9 +21,12 @@ blue_st_sdk/features/device_timestamp_feature.py
 blue_st_sdk/features/feature_accelerometer.py
 blue_st_sdk/features/feature_activity_recognition.py
 blue_st_sdk/features/feature_audio_scene_classification.py
+blue_st_sdk/features/feature_beamforming.py
 blue_st_sdk/features/feature_gyroscope.py
 blue_st_sdk/features/feature_humidity.py
 blue_st_sdk/features/feature_magnetometer.py
+blue_st_sdk/features/feature_mems_sensor_fusion.py
+blue_st_sdk/features/feature_mems_sensor_fusion_compact.py
 blue_st_sdk/features/feature_pressure.py
 blue_st_sdk/features/feature_proximity.py
 blue_st_sdk/features/feature_proximity_gesture.py
@@ -36,6 +39,9 @@ blue_st_sdk/features/audio/adpcm/__init__.py
 blue_st_sdk/features/audio/adpcm/bv_audio_sync_manager.py
 blue_st_sdk/features/audio/adpcm/feature_audio_adpcm.py
 blue_st_sdk/features/audio/adpcm/feature_audio_adpcm_sync.py
+blue_st_sdk/features/audio/opus/__init__.py
+blue_st_sdk/features/audio/opus/feature_audio_opus.py
+blue_st_sdk/features/audio/opus/feature_audio_opus_conf.py
 blue_st_sdk/features/standard_characteristics/__init__.py
 blue_st_sdk/features/standard_characteristics/feature_heart_rate.py
 blue_st_sdk/features/standard_characteristics/standard_characteristic_to_feature_map.py

@@ -250,9 +250,9 @@ class FeatureCharacteristic(object):
         0x00000800: feature_beamforming.FeatureBeamforming,
         #0x00000400: feature_acceleration_event.FeatureAccelerometerEvent,
         #0x00000200: feature_free_fall.FeatureFreeFall,
-        #0x00000100: feature_mems_sensor_fusion_compact.FeatureMemsSensorFusionCompact,
+        0x00000100: feature_mems_sensor_fusion_compact.FeatureMemsSensorFusionCompact,
 
-        #0x00000080: feature_mems_sensor_fusion.FeatureMemsSensorFusion,
+        0x00000080: feature_mems_sensor_fusion.FeatureMemsSensorFusion,
         #0x00000020: feature_motion_intensity.FeatureMotionIntensity,
         #0x00000040: feature_compass.FeatureCompass,
         0x00000010: feature_activity_recognition.FeatureActivityRecognition,
@@ -293,9 +293,9 @@ class FeatureCharacteristic(object):
         #0x00000800: feature_magnetometer_normalized.FeatureMagnetometerNormalized,
         #0x00000400: feature_acceleration_event.FeatureAccelerometerEvent,
         #0x00000200: feature_event_counter.FeatureEventCounter,
-        #0x00000100: feature_mems_sensor_fusion_compact.FeatureMemsSensorFusionCompact,
+        0x00000100: feature_mems_sensor_fusion_compact.FeatureMemsSensorFusionCompact,
 
-        #0x00000080: feature_mems_sensor_fusion.FeatureMemsSensorFusion,
+        0x00000080: feature_mems_sensor_fusion.FeatureMemsSensorFusion,
         #0x00000020: feature_motion_intensity.FeatureMotionIntensity,
         #0x00000040: feature_compass.FeatureCompass,
         0x00000010: feature_activity_recognition.FeatureActivityRecognition,

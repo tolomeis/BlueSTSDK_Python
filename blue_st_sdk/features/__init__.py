@@ -18,8 +18,8 @@ __all__ = [
     #'feature_luminosity', \
     'feature_magnetometer', \
     #'feature_mems_gesture', \
-    #'feature_mems_sensor_fusion', \
-    #'feature_mems_sensor_fusion_compact', \
+    'feature_mems_sensor_fusion', \
+    'feature_mems_sensor_fusion_compact', \
     #'feature_microphone_level', \
     #'feature_motion_intensity', \
     #'feature_pedometer', \
