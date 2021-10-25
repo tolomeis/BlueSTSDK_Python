@@ -21,7 +21,9 @@ blue_st_sdk/features/device_timestamp_feature.py
 blue_st_sdk/features/feature_accelerometer.py
 blue_st_sdk/features/feature_activity_recognition.py
 blue_st_sdk/features/feature_audio_scene_classification.py
+blue_st_sdk/features/feature_battery.py
 blue_st_sdk/features/feature_beamforming.py
+blue_st_sdk/features/feature_compass.py
 blue_st_sdk/features/feature_gyroscope.py
 blue_st_sdk/features/feature_humidity.py
 blue_st_sdk/features/feature_magnetometer.py

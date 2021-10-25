@@ -7,6 +7,8 @@ from blue_st_sdk.features.field import Field
 from blue_st_sdk.features.field import FieldType
 from blue_st_sdk.utils.number_conversion import LittleEndian
 
+# TODO: extract the missing data from the packet. Currently this feature outputs one quaternion every 0.03ms.
+# But the "compact" message has 3 quaternions packed that need to be published at the exact time (one every 0.01ms)
 
 # CLASSES
 
@@ -85,13 +87,12 @@ class FeatureMemsSensorFusionCompact(Feature):
             raise Exception('There are no %s bytes available to read.' \
                 % (self.DATA_LENGTH_BYTES))
 
-        x = LittleEndian.bytes_to_int16(data, offset) / self.SCALE_FACTOR
-        y = LittleEndian.bytes_to_int16(data, offset + 2) / self.SCALE_FACTOR
-        z = LittleEndian.bytes_to_int16(data, offset + 4) / self.SCALE_FACTOR
-        w = math.sqrt(1 - (x*x + y*y + z*z))
+        qi = LittleEndian.bytes_to_int16(data, offset) / self.SCALE_FACTOR
+        qj = LittleEndian.bytes_to_int16(data, offset + 2) / self.SCALE_FACTOR
+        qk = LittleEndian.bytes_to_int16(data, offset + 4) / self.SCALE_FACTOR
 
         sample = Sample(
-            [x, y, z, w],
+            [qi, qj, qk, math.sqrt(1 - (qi*qi + qj*qj + qk*qk))],
             self.get_fields_description(),
             timestamp)
 

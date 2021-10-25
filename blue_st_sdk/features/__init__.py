@@ -8,7 +8,7 @@ __all__ = [
     #'feature_battery', \
     'feature_beamforming', \
     #'feature_carry_position', \
-    #'feature_compass', \
+    'feature_compass', \
     #'feature_co_sensor', \
     #'feature_dc_motor', \
     #'feature_direction_of_arrival', \

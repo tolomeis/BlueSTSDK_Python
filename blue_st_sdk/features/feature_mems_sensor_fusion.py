@@ -94,9 +94,7 @@ class FeatureMemsSensorFusion(Feature):
         if len(data) - offset > self.DATA_LENGTH_BYTES:
             w = LittleEndian.bytesToFloat(data, offset + 12)
             read_bytes = 16
-
             norm = math.sqrt(x*x + y*y + z*z + w*w)
-
             x /= norm
             y /= norm
             z /= norm

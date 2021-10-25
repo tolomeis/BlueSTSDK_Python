@@ -46,6 +46,7 @@ import sys
 import os
 import time
 from abc import abstractmethod
+#sys.path.insert(0, '$(pwd)')
 
 from blue_st_sdk.manager import Manager
 from blue_st_sdk.manager import ManagerListener
@@ -72,10 +73,10 @@ INTRO = """##################
 ##################"""
 
 # Bluetooth Scanning time in seconds (optional).
-SCANNING_TIME_s = 5
+SCANNING_TIME_s = 2
 
 # Number of notifications to get before disabling them.
-NOTIFICATIONS = 10000
+NOTIFICATIONS = 330
 
 
 # FUNCTIONS
@@ -165,6 +166,7 @@ class MyFeatureListener(FeatureListener):
         if self._notifications < NOTIFICATIONS:
             self._notifications += 1
             print(feature)
+
 
 
 # MAIN APPLICATION
@@ -281,10 +283,14 @@ def main(argv):
                     device.enable_notifications(audio_feature)
 
                 # Getting notifications.
+                t = time.time()
                 notifications = 0
                 while notifications < NOTIFICATIONS:
                     if device.wait_for_notifications(0.05):
                         notifications += 1
+                deltaT = (time.time() - t)
+                r = NOTIFICATIONS/deltaT
+                print(r)
 
                 # Disabling notifications.
                 device.disable_notifications(feature)

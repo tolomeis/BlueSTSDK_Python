@@ -254,7 +254,7 @@ class FeatureCharacteristic(object):
 
         0x00000080: feature_mems_sensor_fusion.FeatureMemsSensorFusion,
         #0x00000020: feature_motion_intensity.FeatureMotionIntensity,
-        #0x00000040: feature_compass.FeatureCompass,
+        0x00000040: feature_compass.FeatureCompass,
         0x00000010: feature_activity_recognition.FeatureActivityRecognition,
 
         #0x00000008: feature_carry_position.FeatureCarryPosition,
@@ -297,7 +297,7 @@ class FeatureCharacteristic(object):
 
         0x00000080: feature_mems_sensor_fusion.FeatureMemsSensorFusion,
         #0x00000020: feature_motion_intensity.FeatureMotionIntensity,
-        #0x00000040: feature_compass.FeatureCompass,
+        0x00000040: feature_compass.FeatureCompass,
         0x00000010: feature_activity_recognition.FeatureActivityRecognition,
 
         #0x00000008: feature_carry_position.FeatureCarryPosition,
